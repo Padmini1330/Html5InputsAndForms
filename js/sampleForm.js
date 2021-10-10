@@ -8,6 +8,12 @@ text.addEventListener('input', function() {
         textError.textContent = "Incorrect Name"
 });
 
+const salary = document.querySelector('#salary')
+const output = document.querySelector('.salary-output')
+output.textContent=salary.value;
+salary.addEventListener('input', function() {
+    output.textContent=salary.value;
+});
 
 const email = document.querySelector('#email')
 const emailError = document.querySelector('.email-error')
