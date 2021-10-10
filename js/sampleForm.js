@@ -8,3 +8,14 @@ text.addEventListener('input', function() {
         textError.textContent = "Incorrect Name"
 });
 
+const email = document.querySelector('#email')
+const emailError = document.querySelector('.email-error')
+email.addEventListener('input', function() {
+    let emailRegEx = RegExp('^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-zA-Z0-9]+[.]{1}[a-zA-Z]+[.]?[a-zA-Z]+$')
+    if(emailRegEx.test(email.value))
+        emailError.textContent = ""
+    else
+        emailError.textContent = "Incorrect Email"
+});
+
+const phone = document.querySelector('#tel')
