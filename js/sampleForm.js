@@ -19,14 +19,6 @@ email.addEventListener('input', function() {
         emailError.textContent = "Incorrect Email"
 });
 
-const phone = document.querySelector('#tel')
-const phoneError = document.querySelector('.phone-error')
-phone.addEventListener('input', function() {
-    let phoneRegEx = RegExp('^[0-9]{2}\\s{1}[0-9]{10}$')
-    if(phoneRegEx.test(phone.value))
-        phoneError.textContent = ""
-    else
-        phoneError.textContent = "Incorrect phone number"
-});
+
 
 
