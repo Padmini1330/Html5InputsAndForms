@@ -29,4 +29,13 @@ phone.addEventListener('input', function() {
         phoneError.textContent = "Incorrect phone number"
 });
 
+const password = document.querySelector('#password')
+const passwordError = document.querySelector('.password-error')
+password.addEventListener('input', function() {
+    let passwordRegEx = RegExp('^(?=.*[A-Z])(?=.*[a-z])(?=[^!@_#$%^&+=]*[!@_#$%^&+=][^!@_#$%^&+=]*$)(?=.*[0-9]).{8,}$')
+    if(passwordRegEx.test(password.value))
+        passwordError.textContent = ""
+    else
+        passwordError.textContent = "Incorrect input"
+});
 
