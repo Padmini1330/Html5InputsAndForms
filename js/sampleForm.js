@@ -28,7 +28,7 @@ email.addEventListener('input', function() {
 const phone = document.querySelector('#tel')
 const phoneError = document.querySelector('.phone-error')
 phone.addEventListener('input', function() {
-    let phoneRegEx = RegExp('^[0-9]{2}\\s{1}[0-9]{10}$')
+    let phoneRegEx = RegExp('^[0-9]{2}\\s{1}[7-9]{1}[0-9]{9}$')
     if(phoneRegEx.test(phone.value))
         phoneError.textContent = ""
     else
